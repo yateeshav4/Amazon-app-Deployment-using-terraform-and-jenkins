@@ -31,7 +31,7 @@ resource "aws_security_group" "Jenkins-sg" {
 
 
 resource "aws_instance" "web" {
-  ami                    = "ami-0ec0e125bb6c6e8ec"
+  ami                    = "ami-0ad21ae1d0696ad58"
   instance_type          = "t2.large"
   key_name               = "my key"
   vpc_security_group_ids = [aws_security_group.Jenkins-sg.id]
@@ -45,7 +45,7 @@ resource "aws_instance" "web" {
   }
 }
 resource "aws_instance" "web2" {
-  ami                    = "ami-0c7217cdde317cfec"
+  ami                    = "ami-0ad21ae1d0696ad58"
   instance_type          = "t2.medium"
   key_name               = "my key"
   vpc_security_group_ids = [aws_security_group.Jenkins-sg.id]
